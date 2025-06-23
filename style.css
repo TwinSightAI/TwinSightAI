@@ -142,16 +142,15 @@ nav a:hover {
 }
 
 /* Page Sections */
+/* Section General Styling */
 section {
   padding: 4rem 2rem;
   background-color: #fdfdfd;
   border-bottom: 1px solid #eee;
-  max-width: 1000px;
-  margin: auto;
 }
 
 section:nth-child(even) {
-  background-color: #f4f8fb;
+  background-color: #f4f8fb; /* Slightly tinted background for contrast */
 }
 
 section h2 {
@@ -185,7 +184,6 @@ section ul li:hover {
   transform: translateX(5px);
   color: #007acc;
 }
-
 /* Footer */
 footer {
   text-align: center;
