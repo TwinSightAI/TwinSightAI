@@ -400,3 +400,17 @@ footer {
     align-items: center;
   }
 }
+@media (min-width: 769px) {
+  #navbar {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background: transparent;
+    padding: 0;
+    gap: 20px;
+  }
+
+  #navbar.hidden {
+    display: flex !important; /* override hidden class */
+  }
+}
