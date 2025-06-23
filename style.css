@@ -442,7 +442,7 @@ footer {
   #navbar {
     display: flex !important;
     gap: 20px;
-    position: relative;
+    position: right;
     z-index: 2;
     background: none;
     padding: 0;
@@ -450,5 +450,6 @@ footer {
 
   .hamburger {
     display: none;
+    position: relative;
   }
 }
