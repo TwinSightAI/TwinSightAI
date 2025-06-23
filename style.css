@@ -333,3 +333,40 @@ footer {
     font-size: 0.85rem;
   }
 }
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 3;
+}
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  nav a {
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav.show {
+    display: flex;
+  }
+}
