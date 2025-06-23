@@ -338,7 +338,7 @@ footer {
   font-size: 30px;
   cursor: pointer;
   color: white;
-  display: none;
+  display: none; /* Hidden on large screens */
   position: absolute;
   top: 20px;
   right: 30px;
@@ -349,6 +349,7 @@ footer {
   display: none;
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -367,5 +368,35 @@ footer {
 
   #navbar.hidden {
     display: none;
+  }
+
+  .overlay {
+    flex-direction: column;
+  }
+}
+
+/* Desktop/Laptop Styles */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none; /* Hide hamburger */
+  }
+
+  #navbar {
+    display: flex !important; /* Always show navbar */
+    flex-direction: row;
+    position: static;
+    background: transparent;
+    padding: 0;
+    gap: 20px;
+  }
+
+  #navbar.hidden {
+    display: flex !important; /* Force show */
+  }
+
+  .overlay {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
