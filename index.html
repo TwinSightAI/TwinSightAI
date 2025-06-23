@@ -18,17 +18,14 @@
     </div>
 
     <!-- Hamburger Icon -->
-    <div class="hamburger" onclick="toggleMenu()"></div>
-
-    <!-- Navigation Links -->
-    <nav id="navbar">
-      <a href="#about">About</a>
-      <a href="#problem">Problem</a>
-      <a href="#solution">Solution</a>
-      <a href="#challenges">Challenges</a>
-      <a href="#team">Team</a>
-    </nav>
-  </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+<nav id="navbar" class="hidden">
+  <a href="#about">About</a>
+  <a href="#problem">Problem</a>
+  <a href="#solution">Solution</a>
+  <a href="#challenges">Challenges</a>
+  <a href="#team">Team</a>
+</nav>
 </header>
 
 
@@ -221,7 +218,12 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
 <script src="script.js" defer></script>
-
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('navbar');
+    nav.classList.toggle('hidden');
+  }
+</script>
 
 </body>
 </html>
