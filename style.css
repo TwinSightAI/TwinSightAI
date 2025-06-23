@@ -414,3 +414,41 @@ footer {
     display: flex !important; /* override hidden class */
   }
 }
+@media (min-width: 769px) {
+  .overlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    height: auto;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .branding {
+    position: relative;
+    z-index: 2;
+  }
+
+  .branding h1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    font-size: 2rem;
+    color: #f1e5f1;
+  }
+
+  #navbar {
+    display: flex !important;
+    gap: 20px;
+    position: right;
+    z-index: 2;
+    background: none;
+    padding: 0;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
