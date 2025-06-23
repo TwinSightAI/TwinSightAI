@@ -93,6 +93,7 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   background: linear-gradient(to bottom right, #001f3f, #003366);
+  padding: 4rem 2rem;
 }
 
 .hero-content {
@@ -111,6 +112,10 @@ nav a:hover {
 .hero-content .text,
 .hero-content .hero-image {
   flex: 1 1 50%;
+}
+
+.hero-content .text p {
+  color: #e7f0eb;
 }
 
 .hero-content .hero-image {
@@ -136,24 +141,47 @@ nav a:hover {
 
 /* Page Sections */
 section {
-  padding: 40px 20px;
+  padding: 4rem 2rem;
+  background-color: #fdfdfd;
+  border-bottom: 1px solid #eee;
   max-width: 1000px;
   margin: auto;
-  color: #e0cf13;
+}
+
+section:nth-child(even) {
+  background-color: #f4f8fb;
 }
 
 section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #004466;
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 1rem;
+  border-left: 6px solid #00ccff;
+  padding-left: 1rem;
+}
+
+section p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 1rem;
 }
 
 section ul {
-  padding-left: 20px;
+  padding-left: 1.5rem;
+  list-style-type: disc;
 }
 
 section ul li {
-  margin-bottom: 8px;
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 0.6rem;
+  transition: transform 0.2s ease;
+}
+
+section ul li:hover {
+  transform: translateX(5px);
+  color: #007acc;
 }
 
 /* Footer */
