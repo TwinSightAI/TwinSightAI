@@ -338,6 +338,7 @@ footer {
   display: none;
   font-size: 2rem;
   color: white;
+  background-color: #00ccff;
   cursor: pointer;
   position: absolute;
   top: 20px;
