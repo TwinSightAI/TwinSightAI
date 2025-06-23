@@ -442,7 +442,7 @@ footer {
   #navbar {
     display: flex !important;
     gap: 20px;
-    position: right;
+    position: relative;
     z-index: 2;
     background: none;
     padding: 0;
