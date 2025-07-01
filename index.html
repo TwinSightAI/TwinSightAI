@@ -6,21 +6,27 @@
   <title>Digital Twin Monitoring</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+
 </head>
 <body>
   <!-- Navigation and Branding Section -->
-  <header id="hero">
+<header id="hero">
   <div id="three-container"></div>
   <div class="overlay">
     <div class="branding">
-      <h1>TwinSightAI</h1>
+      <h1>TwinsightAI</h1>
     </div>
 
-    <!-- Hamburger icon (mobile only) -->
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+ <button id="navToggle" aria-label="Toggle Menu">
+  <i class="fas fa-ellipsis-v" id="menuIcon"></i>
+</button>
 
-    <!-- Navigation links -->
+
+    <!-- Navigation Menu -->
     <nav id="navbar" class="hidden">
       <a href="#about">About</a>
       <a href="#problem">Problem</a>
@@ -33,60 +39,88 @@
 
 
   <!-- Hero Text Section -->
-<section class="hero-text">
+   <section class="hero-text">
+   <img src="images/Gis.jpg" alt="Background" class="hero-bg-img" /><!-- Background image layer -->
+
   <div class="hero-content">
     <div class="text">
       <h2>Real-Time Monitoring for Sustainable Decisions</h2>
       <p>Integrating sensor and satellite data to create smart, sustainable environments.</p>
     </div>
-    <div class="hero-image">
-      <img src="Conduit.jpg" alt="The Conduit" />
-    </div>
+
+    <a href="https://naftalinassir01.wixsite.com/nassir-bloggs-and-ar/post/from-jhub-africa-to-climate-innovation-twinsight-ai-tackles-real-world-environmental-challenges" 
+       target="_blank" 
+       class="blog-link">
+      Learn more →
+    </a>
   </div>
 </section>
 
-  <div class="absolute inset-0 w-full h-full bg-hero pointer-events-none" id="tsparticles">
-  <canvas class="w-full h-full" aria-hidden="true"></canvas>
-</div>
+
   <section id="about">
-    <h2>About</h2>
-    <p>This project develops a digital twin model for real-time environmental monitoring using IoT sensors and satellite imagery.</p>
-  </section>
+  <h2>About</h2>
+  <p>
+   TwinSight AI is inspired by Conduit Empathy, an art installation at JKUAT by Eva Petrič, symbolizing innovation in SPACE-SI satellite technologies and C3M digital twin models. Designed to enhance agriculture and environmental monitoring, TwinSight AI integrates satellite imagery with real-time sensor data to deliver precise insights on crop health, soil conditions, and environmental risks. It offers features like real-time alerts, early hazard detection, and data-driven sustainability planning, helping farmers boost productivity, reduce waste, and support climate resilience. </p>
+</section>
 
-  <section id="problem">
-    <h2>Problem</h2>
-  <ul>
-    <li>data silos</li>
-    <li>limited insights</li>
-    <li>high operational costs</li>
-  </ul>
-  </section>
+<section id="problem" class="fade-in-section">
+  <h2>Problem</h2>
+  <p>
+    <strong>Problem Statement</strong><br><br>
+    Limited real-time insights into environmental and agricultural conditions, which makes it difficult for farmers and institutions to detect issues early, respond promptly, and make data-informed decisions for sustainability and productivity. Without timely and accurate data, traditional methods fall short in anticipating challenges such as droughts, pests, and soil degradation—leading to reduced crop yields, increased costs, and environmental strain. TwinSight AI addresses this gap by delivering intelligent, real-time monitoring and predictive analytics that empower users to act decisively and sustainably.
+  </p>
+</section>
 
-  <section id="solution">
-   <h2>Solution</h2>
-    <p>"By leveraging a centralized, interoperable platform powered by cloud infrastructure and real-time APIs, we break down data silos to enable cohesive, intelligent decision-making across all systems."
+  
+<section id="solution">
+  <h2>Solutions to Challenges</h2>
 
-.</p>
-<p>"Through seamless integration of real-time sensor inputs, satellite imagery, and intelligent analytics, our platform transforms raw data into deep, actionable insights—empowering timely, data-driven decisions that enhance operational efficiency and sustainability."</p>
-  </section>
+  <div class="solution-slider" id="solutionScroll">
+    <div class="solution-box">
+      <h3>🧩 Data Silos</h3>
+      <p>We use a centralized, cloud-based platform to integrate diverse environmental data sources—eliminating data fragmentation and enabling unified decision-making.</p>
+    </div>
+    <div class="solution-box">
+      <h3>💸 High Operational Costs</h3>
+      <p>By automating data collection using real-time sensors, satellite feeds, and <strong>Conduit Empathy Sensors</strong>, we reduce manual workload and operational expenses.</p>
+    </div>
+    <div class="solution-box">
+      <h3>🔗 Integration Complexity</h3>
+      <p>We use standardized APIs for seamless communication between <strong>Conduit Empathy Sensors</strong> and other platforms.</p>
+    </div>
+    <div class="solution-box">
+      <h3>💻 Technical Infrastructure Limitations</h3>
+      <p>Cloud-native architecture plus <strong>Conduit Empathy Sensors</strong> ensures scalable, low-cost deployment.</p>
+    </div>
+  </div>
 
-  <section id="challenges">
-    <h2>Challenges</h2>
-    <ul>
-      <li>Data silos</li>
-      <li>High operational costs</li>
-      <li>Integration complexity</li>
-      <li>Technical infrastructure limitations</li>
-    </ul>
-  </section>
+  <button id="toggleScroll" class="scroll-toggle">⏸ Pause Auto Scroll</button>
+</section>
+<section id="demo">
+  <h2>See Conduit in Action</h2>
+  <p>Click below to watch how Conduit Empathy Sensors help predict floods.</p>
 
+  <!-- CTA Buttons -->
+<button id="showVideoBtn" class="cta-button">▶️ Watch Video</button>
+<button id="replayVideoBtn" class="cta-button" style="display: none;">🔁 Replay Video</button>
+
+
+  <!-- Hidden Video -->
+  <div id="videoContainer" style="display: none; margin-top: 2rem;">
+    <video id="conduitVideo" controls muted  width="100%" poster="images/preview.jpg">
+      <source src="videos/cvideo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
  <section id="team">
   <h2>Team</h2>
   <p>Meet the dedicated team behind the project</p>
-  <div class="team-container">
+   <div class="banner-container">
+    <div class="banner-track">
     <!-- Team Member Template -->
     <div class="team-member">
-      <img src="Jose.jpg" alt="Joseph Ndungu">
+      <img src="images/jose.jpg" alt="Joseph Ndungu">
       <h3>Joseph Ndungu</h3>
       <p>Team Lead</p>
      <div class="social-links">
@@ -101,7 +135,7 @@
     </div>
 
     <div class="team-member">
-      <img src="Dorryl.jpg" alt="Dee">
+      <img src="images/dee.jpg" alt="Dee">
       <h3>Dorica Mbula</h3>
       <p>Front-end Developer</p>
       <div class="social-links">
@@ -116,7 +150,7 @@
     </div>
 
     <div class="team-member">
-      <img src="Felix.jpg" alt="Felix Oyoo">
+      <img src="images/f.jpg" alt="Felix Oyoo">
       <h3>Felix Oyoo</h3>
       <p>UI/UX Designer</p>
      <div class="social-links">
@@ -130,7 +164,7 @@
 
     </div>
       <div class="team-member">
-      <img src="Nassir.jpg" alt="Naftali Nassir">
+      <img src="images/nassir.jpg" alt="Naftali Nassir">
       <h3>Naftali Nassir</h3>
       <p>Mass Communication</p>
       <div class="social-links">
@@ -144,7 +178,7 @@
 
     </div>
        <div class="team-member">
-      <img src="Willy.jpg" alt="Willy Mutunga">
+      <img src="images/wil.jpg" alt="Willy Mutunga">
       <h3>Willy Mutunga</h3>
       <p>Backend Developer</p>     
       <div class="social-links">
@@ -157,11 +191,11 @@
 </div>
     </div>
     <div class="team-member">
-      <img src="Kahuru.jpg" alt="Kelvin Uhuru">
+      <img src="images/kh.jpg" alt="Kelvin Uhuru">
       <h3>Kelvin Uhuru</h3>
       <p>Software Engineer</p>
      <div class="social-links">
-  <a href="https://linkedin.com/in/josephndungu" target="_blank" title="LinkedIn">
+  <a href="www.linkedin.com/in/kelvin-uhuru" target="_blank" title="LinkedIn">
     <i class="fab fa-linkedin"></i>
   </a>
   <a href="https://github.com/josephndungu" target="_blank" title="GitHub">
@@ -171,7 +205,7 @@
 
     </div>
     <div class="team-member">
-      <img src="Eric.jpg" alt="Eric Thomas">
+      <img src="images/er.jpg" alt="Eric Thomas">
       <h3>Eric Thomas</h3>
       <p>Machine Learning Specialist</p>
      <div class="social-links">
@@ -185,7 +219,7 @@
 
     </div>
       <div class="team-member">
-      <img src="Steph.jpg" alt="Stephanie Bakhita">
+      <img src="images/bkhita.jpg" alt="Stephanie Bakhita">
       <h3>Stephanie Bakhita</h3>
       <p>Geospatial Engineer</p>
      <div class="social-links">
@@ -197,6 +231,7 @@
   </a>
 </div>
 
+    </div>
     </div>
 
 
@@ -210,25 +245,8 @@
   <footer>
     <p>&copy; 2025 Digital Twin Model Environmental Monitoring</p>
   </footer>
-  <script>
-  const scrollBtn = document.getElementById("scrollUpBtn");
-  window.onscroll = function () {
-    scrollBtn.style.display = document.documentElement.scrollTop > 300 ? "block" : "none";
-  };
-
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
-<script src="script.js" defer></script>
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById('navbar');
-    nav.classList.toggle('hidden');
-  }
-</script>
-
+ <script src="home.js"></script>
+  
 </body>
 </html>
 
